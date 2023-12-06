@@ -525,7 +525,6 @@ opacity: 1;
 /* contacts------------------------------------------------------------ */
 .contacts-wrap {
   display: flex;
-  justify-content: space-between;
   padding: 45px;
   margin-bottom: 40px;
   border-radius: 15px;
@@ -535,13 +534,13 @@ opacity: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 35%;
 }
 .contacts__item {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #E9E9E9;
   padding: 25px 0 22px;
-  margin-right: 52px;
 }
 .contacts__item:first-child {
   padding-top: 0;
@@ -552,25 +551,36 @@ opacity: 1;
   margin-right: 23px;
 }
 .contacts__text {
-  width: 230px;
-  font-size: 16px;
+  width: 223px;
+  padding-right: 20px;
   line-height: 150%;
 }
-.contacts__tel a {
-  display: block;
-  width: 230px;
+.contacts__phones {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  width: 223px;
+}
+.contacts__link {
   color: #C93;
-  font-size: 16px;
   line-height: 150%;
+  transition: all 0.2s linear;
+}
+.contacts__link:hover {
+  color: #F0BF5F;
+}
+.contacts__link:focus {
+  color: #C93;
+  outline: 1px solid #C93;
+  outline-offset: 2px;
+}
+.contacts__link:active {
+  color: #A47312;
+  outline: none;
 }
 .mail-wrap {
   display: block;
-  width: 230px;
-}
-.contacts__email {
-  color: #C93;
-  font-size: 16px;
-  line-height: 150%;
+  width: 223px;
 }
 .mail-inner__text {
   color: #999;
@@ -581,6 +591,9 @@ opacity: 1;
   width: 213px;
   padding: 26px 28px;
   margin-top: 20px;
+}
+.contacts__img-wrap {
+  margin-left: auto;
 }
 .contacts__img {
   object-fit: contain;
@@ -599,6 +612,7 @@ opacity: 1;
 .footer__info {
   display: flex;
   flex-direction: column;
+  align-items: baseline;
   gap: 38px;
   width: 302px;
   margin-right: 125px;
@@ -629,20 +643,34 @@ opacity: 1;
   color: #C93;
   font-size: 16px;
   line-height: 150%;
-  transition: all 0.3s linear;
+  transition: all 0.2s linear;
 }
 .footer__link:hover {
   color: #F0BF5F;
+}
+.footer__link:focus {
+  color: #C93;
+  outline: 1px solid #C93;
+}
+.footer__link:focus {
+  color: #A47312;
+  outline: none;
 }
 .footer-address__tel,
 .footer-address__mail {
   display: flex;
   flex-direction: column;
-  width: 150px;
+  align-items: baseline;
 }
 .footer-socials__icon path {
-  transition: fill 0.3s linear;
+  transition: fill 0.2s linear;
 }
 .footer-socials__icon:hover path {
   fill: #C93;
+}
+.footer-socials__link:focus path {
+  fill: #C93;
+}
+.footer-socials__link:active path {
+  fill: #A47312;
 }
