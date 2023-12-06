@@ -662,7 +662,7 @@ opacity: 1;
   flex-direction: column;
   align-items: baseline;
 }
-/* .footer-socials__icon path {
+.footer-socials__icon path {
   transition: fill 0.2s linear;
 }
 .footer-socials__icon:hover path {
@@ -673,4 +673,4 @@ opacity: 1;
 }
 .footer-socials__link:active path {
   fill: #A47312;
-} */
+}
