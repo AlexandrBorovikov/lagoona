@@ -671,6 +671,4 @@ opacity: 1;
 .footer-socials__link:focus path {
   fill: #C93;
 }
-.footer-socials__link:active path {
-  fill: #A47312;
-}
+
