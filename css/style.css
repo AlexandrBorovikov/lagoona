@@ -38,7 +38,7 @@ html {
   box-sizing: inherit;
 }
 body {
-  min-width: 1200px;
+  /* min-width: 1200px; */
   font-family: 'Muller', sans-serif;
   background-color: #F1F1F1;
 }
@@ -89,28 +89,33 @@ address {
 .link {
   display: flex;
   align-items: center;
-  color: #FC6;
+  color: #C93;
   transition: all ease .3s;
 }
 .link:hover {
   color: #F0BF5F;
 }
+.link:active {
+  color: #FFF;
+}
 .link::after {
   content: "";
   width: 11px;
   height: 11px;
-  border-top: 2px solid #F0BF5F;
-  border-right: 2px solid #F0BF5F;
+  border-top: 2px solid #C93;
+  border-right: 2px solid #C93;
   transform: rotate(45deg);
   transition: all ease .3s;
 }
 .link:hover::after {
   margin-left: 15px;
+  border-color: #F0BF5F;
+}
+.link:focus::after {
+  margin-left: 0;
   color: #F0BF5F;
 }
-.link:active {
-  color: #FFF;
-}
+
 .title {
   color: #333;
   font-size: 40px;
@@ -224,8 +229,7 @@ address {
   grid-auto-flow: dense;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 24px;
-  grid-row-gap: 24px;
+  grid-gap: 24px;
 }
 .card-offer {
   position: relative;
@@ -300,9 +304,6 @@ address {
 .card-offer__link:focus::before {
   opacity: 1;
 }
-.card-offer__link:active {
-  color: #A47312;
-}
 /* about---------------------------------------------------------------- */
 .about__text {
   padding-right: 282px;
@@ -320,7 +321,8 @@ address {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 573px;
+  max-width: 573px;
+  width: 100%;
 }
 .services__images {
   height: 50%;
@@ -330,7 +332,7 @@ address {
   height: 50%;
   border-radius: 0px 0px 15px 15px;
   background: #FFF;
-  padding: 26px 126px 35px 45px;
+  padding: 26px 45px 35px;
 }
 .services__link {
   color: #C93;
@@ -338,6 +340,9 @@ address {
   font-style: normal;
   font-weight: 500;
   line-height: 200%;
+}
+.services__link:active {
+  color: #A47312;
 }
 .services__link::before {
   content: "";
@@ -354,7 +359,11 @@ address {
 .services__link:focus::before {
   opacity: 1;
 }
+.services__link:active::before {
+  opacity: 0;
+}
 .services__text {
+  max-width: 402px;
   line-height: 200%;
 }
 /* advantage------------------------------------------------------------ */
@@ -535,6 +544,7 @@ opacity: 1;
   flex-direction: column;
   justify-content: space-between;
   width: 35%;
+  margin-right: 20px;
 }
 .contacts__item {
   display: flex;
