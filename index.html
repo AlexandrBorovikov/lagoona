@@ -16,30 +16,35 @@
         </a>
         <a class="header-top__tel" href="tel:+74953225448">+7 495 322-54-48</a>
         <a class="header-top__account" href="#">Личный кабинет</a>
+        <button class="burger-menu">
+          <span></span>
+        </button>
       </div>
       <nav class="header__nav nav">
         <ul class="nav__list">
           <li class="nav__item">
-            <a class="nav__link" href="#about">О нас</a>
+            <a class="nav__link" data-goto="#about" href="#">О нас</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#services">Услуги</a>
+            <a class="nav__link" data-goto="#services" href="#">Услуги</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#advantage">Преимущества</a>
+            <a class="nav__link" data-goto="#advantage" href="#">Преимущества</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#placement">Размещение</a>
+            <a class="nav__link" data-goto="#placement" href="#">Размещение</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#">Блог</a>
+            <a class="nav__link" href="">Блог</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#contacts">Контакты</a>
+            <a class="nav__link" data-goto="#contacts" href="#">Контакты</a>
           </li>
         </ul>
-        <a class="header__link-1 btn" href="#selection">Хочу тур</a>
-        <a class="header__link-2 btn" href="#">Обратный звонок</a>
+        <div class="header__buttons">
+          <a class="header__btn btn" href="#selection">Хочу тур</a>
+          <a class="header__btn btn" href="#">Обратный звонок</a>
+        </div>
       </nav>
     </header>
     <main class="main">
@@ -53,13 +58,13 @@
             <a class="card-offer__link link" href="#">Подробнее</a>
           </div>
           <div class="offer__card card-offer card-offer_2">
-            <h4 class="card-offer__title">Номера категории люкс</h4>
-            <p class="card-offer__text">от 5 000 ₽</p>
+            <h4 class="card-offer__title">Горящий <br> тур на остров Крит</h4>
+            <p class="card-offer__text">от 30 000 ₽</p>
             <a class="card-offer__link link" href="#">Подробнее</a>
           </div>
           <div class="offer__card card-offer card-offer_3">
-            <h4 class="card-offer__title">Горящий <br> тур на остров Крит</h4>
-            <p class="card-offer__text">от 30 000 ₽</p>
+            <h4 class="card-offer__title">Номера <br> категории люкс</h4>
+            <p class="card-offer__text">от 5 000 ₽</p>
             <a class="card-offer__link link" href="#">Подробнее</a>
           </div>
         </div>
@@ -293,7 +298,7 @@
           </li>
         </ul>
       </section>
-      <section class="selection" id="selection">
+      <!-- <section class="selection" id="selection">
         <h2 class="selection__title title">Хочу тур</h2>
         <form class="selection__form form" action="https://echo.htmlacademy.ru" method="post">
           <div class="form__inner">
@@ -330,7 +335,7 @@
           </div>
           <button class="form__btn btn" type="submit">Найти</button>
         </form>
-      </section>
+      </section> -->
       <section class="contacts" id="contacts">
         <h2 class="contacts__title title">Контакты</h2>
         <div class="contacts-wrap">
@@ -373,7 +378,7 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="footer-wrap">
         <div class="footer__info">
           <p class="footer__text">© 2012–2020 Управляющая компания Объединённой сети «Лагуна Хотелс»</p>
@@ -447,8 +452,8 @@
           </li>
         </ul>
       </div>
-    </footer>
+    </footer> -->
   </div>
-  <script>document.getElementById('date').valueAsDate = new Date()</script>
+  <script src="js/main.js"></script>
 </body>
 </html>
