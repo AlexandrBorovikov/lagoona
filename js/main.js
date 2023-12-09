@@ -2,6 +2,7 @@
 
 const burgerMenu = document.querySelector('.burger-menu');
 const navMenu = document.querySelector('.nav');
+const headerTop = document.querySelector('.header-top');
 
 if (burgerMenu) {
   burgerMenu.addEventListener("click", function (e) {
@@ -23,9 +24,8 @@ if (menuLinks.length > 0) {
     const menuLink = e.target;
     if(menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
       const gotoBlock = document.querySelector(menuLink.dataset.goto);
-      const headerTop = document.querySelector('.header__top');
       let gotoBlockValue;
-      if (window.innerWidth < 768) {
+      if (window.innerWidth < 769) {
         gotoBlockValue = gotoBlock.getBoundingClientRect().top + window.scrollY - headerTop.offsetHeight;
       } else {
         gotoBlockValue = gotoBlock.getBoundingClientRect().top + window.scrollY;
@@ -45,5 +45,24 @@ if (menuLinks.length > 0) {
     }
   }
 }
+// скрытие шапки при скроле--------------------------------
+let lastScroll = 0;
+const defaultOffset = 100;
+
+const scrollPosition = () => window.scrollY || document.documentElement.scrollTop;
+const containHide = () => headerTop.classList.contains('hide');
+
+window.addEventListener('scroll', () => {
+    if(window.innerWidth < 769 && scrollPosition() > lastScroll && !containHide() && scrollPosition() > defaultOffset) {
+        //scroll down
+        headerTop.classList.add('hide');
+    }
+    else if(scrollPosition() < lastScroll && containHide()){
+        //scroll up
+        headerTop.classList.remove('hide');
+    }
+
+    lastScroll = scrollPosition();
+})
 // Актуальная дата в форме------------------------------
 document.getElementById('date').valueAsDate = new Date()
