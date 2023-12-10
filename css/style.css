@@ -149,7 +149,7 @@ address {
   }
   .title {
     font-size: 24px;
-    padding-left: 20px;
+    padding-left: 30px;
     padding-top: 20px;
   }
 }
@@ -187,11 +187,9 @@ address {
     width: 80%;
     background-color: #333;
     border-radius: 3px;
-    transform: scale(1);
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
   }
   .burger-menu.active span {
-    /* transform: scale(0) translate(0, -50%); */
     width: 0;
   }
   .burger-menu.active::before {
@@ -376,6 +374,7 @@ address {
   padding: 40px 15px 40px 40px;
   border-radius: 15px;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 .card-offer::before {
   content: "";
@@ -526,7 +525,7 @@ address {
   object-fit: cover;
 }
 .services__descr {
-  height: 50%;
+  min-height: 50%;
   border-radius: 0px 0px 15px 15px;
   background: #FFF;
   padding: 26px 20px 35px 45px;
@@ -582,6 +581,42 @@ address {
     margin-top: 20px;
   }
 }
+@media (max-width: 768px) {
+  .services__descr {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 26px 45px 35px 45px;
+  }
+  .services__link {
+    font-size: 20px;
+    line-height: 150%;
+  }
+  .services__text {
+    max-width: 500px;
+    font-size: 16px;
+    line-height: 150%;
+    margin-top: 0;
+  }
+}
+@media (max-width: 540px) {
+  .services__descr {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 26px 30px 35px;
+  }
+  .services__link {
+    font-size: 20px;
+    line-height: 120%;
+  }
+  .services__link.link::after {
+    display: none;
+  }
+  .services__text {
+    margin-top: 5px;
+  }
+}
 /* advantage------------------------------------------------------------ */
 .advantage__list {
   display: flex;
@@ -589,7 +624,10 @@ address {
   gap: 22px;
 }
 .advantage__item {
-  width: 276px;
+  min-width: 276px;
+  flex: 1;
+  flex-basis: calc(25% - 22px);
+  width: 100%;
   padding: 40px 42px 32px 45px;
   border-radius: 15px;
   background: #FFF;
@@ -600,6 +638,14 @@ address {
 }
 .advantage-item__img {
   display: block;
+}
+@media (max-width: 540px) {
+  .advantage__item {
+    padding-left: 30px;
+  }
+  .advantage-item__text {
+    line-height: 150%;
+  }
 }
 /* placement------------------------------------------------------------- */
 .placement {
@@ -613,8 +659,10 @@ address {
 .card-placement {
   display: flex;
   flex-direction: column;
-  max-width: 374px;
+  min-width: 374px;
   width: 100%;
+  flex: 1;
+  flex-basis: calc(33.3333% - 24px);
   border-radius: 15px;
   background: #FFF;
 }
@@ -665,6 +713,12 @@ address {
   background-color: #999;
   background-image: url(../sourses/more-places.jpg);
   background-repeat: no-repeat;
+  background-size: cover;
+}
+.card-placement__more::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
 }
 .card-placement__link {
   color: #FFF;
@@ -689,6 +743,18 @@ address {
 .card-placement__link:focus:after {
   border-color: #C93;
   margin-left: 0;
+}
+@media (max-width: 540px) {
+  .card-placement {
+    min-width: auto;
+  }
+  .card-placement__info {
+    padding-left: 30px;
+    padding-bottom: 30px;
+  }
+  .card-placement__more {
+    padding-top: 100%;
+  }
 }
 /* selection----------------------------------------------------------- */
 .selection {

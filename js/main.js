@@ -25,11 +25,7 @@ if (menuLinks.length > 0) {
     if(menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
       const gotoBlock = document.querySelector(menuLink.dataset.goto);
       let gotoBlockValue;
-      if (window.innerWidth < 769) {
-        gotoBlockValue = gotoBlock.getBoundingClientRect().top + window.scrollY - headerTop.offsetHeight;
-      } else {
-        gotoBlockValue = gotoBlock.getBoundingClientRect().top + window.scrollY;
-      }
+      gotoBlockValue = gotoBlock.getBoundingClientRect().top + window.scrollY;
 
       if (burgerMenu.classList.contains('active')) {
         burgerMenu.classList.remove('active');
