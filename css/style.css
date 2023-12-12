@@ -425,11 +425,12 @@ address {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    row-gap: 30px;
+    row-gap: 10px;
     padding-top: 75px;
   }
   .nav__link {
-    font-size: 30px;
+    font-size: 20px;
+    color: #333;
   }
   .header__buttons {
     position: static;
@@ -441,6 +442,10 @@ address {
     margin-left: 0;
     gap: 30px;
     font-size: 20px;
+  }
+  .header__btn {
+    background-color: #F0BF5F;
+    color: #333;
   }
   .header-top {
     position: fixed;
