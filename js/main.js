@@ -12,9 +12,9 @@ if (burgerMenu) {
   });
 }
 
-// Плавная прокрутка
+// Плавная прокрутка------------------------------------------------
 
-const menuLinks = document.querySelectorAll('.nav__link[data-goto]');
+const menuLinks = document.querySelectorAll('a[data-goto]');
 if (menuLinks.length > 0) {
   menuLinks.forEach(menuLink => {
     menuLink.addEventListener('click', onMenuLinkClick);
@@ -61,4 +61,9 @@ window.addEventListener('scroll', () => {
     lastScroll = scrollPosition();
 })
 // Актуальная дата в форме------------------------------
-document.getElementById('date').valueAsDate = new Date()
+const dateInput = document.getElementById('date');
+const currentDate = new Date().toISOString().split('T')[0];
+
+dateInput.valueAsDate = new Date();
+dateInput.min = currentDate;
+
