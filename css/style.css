@@ -167,6 +167,8 @@ address {
     display: flex;
     justify-content: end;
     align-items: center;
+    flex-shrink: 0;
+    margin-left: 20px;
   }
   .burger-menu::before,
   .burger-menu::after {
@@ -382,6 +384,7 @@ address {
     margin-right: auto;
     margin-left: 0;
     width: auto;
+    justify-content: left;
   } 
   .header-top__account span {
     display: none;
@@ -399,9 +402,6 @@ address {
   @media  (max-width: 540px) {
     .header-top__logo {
       margin-right: 10px;
-    }
-    .header-top__account {
-      margin-right: 50px;
     }
   }
 }
@@ -717,7 +717,9 @@ address {
   background: #FFF;
 }
 .card-placement__img {
-  border-radius: 15px 15px 0px 0px
+  border-radius: 15px 15px 0px 0px;
+  max-height: 217px;
+  object-fit: cover;
 }
 .card-placement__info {
   display: flex;
@@ -771,6 +773,7 @@ address {
   flex-direction: column;
   justify-content: end;
   align-items: center;
+  max-height: 441px;
 }
 .card-placement__link {
   color: #FFF;
