@@ -1247,7 +1247,9 @@ input[type=number]::-webkit-outer-spin-button {
   line-height: 150%;
 }
 .contacts__btn {
-  width: 213px;
+  display: flex;
+  justify-content: center;
+  max-width: 213px;
   padding: 26px 28px;
   margin-top: 20px;
 }
@@ -1283,6 +1285,9 @@ input[type=number]::-webkit-outer-spin-button {
   }
   .contacts__caption {
     margin-bottom: 15px;
+  }
+  .contacts__btn {
+    padding: 20px;
   }
 }
 
