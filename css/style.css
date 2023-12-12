@@ -25,6 +25,7 @@
   font-weight: bold;
   font-style: normal;
 }
+
 /* normolize--------------------------------------------------------- */
 html {
   scroll-behavior: smooth;
@@ -63,6 +64,7 @@ button {
 address {
   font-style: normal;
 }
+
 /* global--------------------------------------------------------- */
 .container {
   max-width: 1200px;
@@ -115,7 +117,6 @@ address {
   margin-left: 0;
   color: #F0BF5F;
 }
-
 .title {
   color: #333;
   font-size: 40px;
@@ -153,6 +154,7 @@ address {
     padding-top: 20px;
   }
 }
+
 /* burger-------------–––––––----------------------------- */
 .burger-menu {
   display: none;
@@ -201,6 +203,7 @@ address {
     transform: rotate(45deg) translate(0, 50%);
   }
 }
+
 /* header ---------------------------------------------- */
 .header {
   min-height: 74px;
@@ -219,7 +222,7 @@ address {
   color: #666;
   font-size: 20px;
   font-weight: 500;
-  transition: all .3s;
+  transition: all .3s ease;
 }
 .header-top__tel:hover {
   color: #CC9933;
@@ -240,23 +243,29 @@ address {
   width: 165px;
   color: #C93;
   transition: all .3s;
+  gap: 5px;
 }
-.header-top__account::before {
-  content: "";
-  width: 24px;
-  height: 24px;
-  margin-right: 5px;
-  background-image: url(../sourses/keyboard-tab.svg);
+.header-top__account path {
+  transition: fill .3s ease;
 }
 .header-top__account:hover {
   color: #F0BF5F;
+}
+.header-top__account:hover path {
+  fill: #F0BF5F;
 }
 .header-top__account:focus {
   color: #C93;
   outline: 1px solid #C93;
 }
+.header-top__account:focus path {
+  fill: #C93;
+}
 .header-top__account:active {
   color: #A47312;
+}
+.header-top__account:active path {
+  fill: #A47312;
 }
 .header__nav {
   display: flex;
@@ -365,18 +374,38 @@ address {
   }
   .header-top.hide {
     transform: translateY(-80px);
-}
-  .header-top__logo {
-    margin: 10px 70px 10px 0;
   }
-  .header-top__account, 
+  .header-top__logo {
+    margin: 10px 20px 10px 0;
+  }
+  .header-top__account {
+    margin-right: auto;
+    margin-left: 0;
+    width: auto;
+  } 
+  .header-top__account span {
+    display: none;
+  }
+  .account-header__icon {
+    width: 30px;
+    height: 30px;
+  }
   .header-top__tel {
     display: none;
   }
   .open {
     left: 0;
   }
+  @media  (max-width: 540px) {
+    .header-top__logo {
+      margin-right: 10px;
+    }
+    .header-top__account {
+      margin-right: 50px;
+    }
+  }
 }
+
 /* offer--------------------------------------------------- */
 .offer-wrap {
   display: grid;
@@ -509,6 +538,7 @@ address {
     font-size: 16px;
   }
 }
+
 /* about---------------------------------------------------------------- */
 .about__text {
   padding-right: 282px;
@@ -524,6 +554,7 @@ address {
     line-height: 150%; 
   }
 }
+
 /* serices--------------------------------------------------------------- */
 .services-wrap {
   display: flex;
@@ -637,6 +668,7 @@ address {
     margin-top: 5px;
   }
 }
+
 /* advantage------------------------------------------------------------ */
 .advantage__list {
   display: flex;
@@ -667,6 +699,7 @@ address {
     line-height: 150%;
   }
 }
+
 /* placement------------------------------------------------------------- */
 .placement {
   padding-bottom: 70px;
@@ -785,14 +818,12 @@ address {
     display: none;
   }
 }
-@media (max-width: 540px) {
-
-}
 @media (max-width: 400px) {
   .card-placement__link {
     font-size: 18px;
   }
 }
+
 /* selection----------------------------------------------------------- */
 .selection {
   border-radius: 15px;
@@ -815,7 +846,6 @@ address {
 .form__inner {
   display: flex;
   flex-direction: column;
-  /* margin-right: 20px; */
 }
 .form__inner_1,
 .form__inner_2 {
@@ -855,24 +885,13 @@ input[type=number]::-webkit-outer-spin-button {
   appearance: textfield;
   opacity: 1;
 }
-/* input[type=date]::-webkit-calendar-picker-indicator,
-input[type=date]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  opacity: 0;
-  display: none;
-} */
 .form__date {
   width: 100%;
   border: none;
   font-family: inherit;
   font-size: 16px;
   color: inherit;
-  /* padding-right: 15px; */
   background-color: transparent;
-  /* background-image: url(../sourses/calendar.svg); */
-  /* background-repeat: no-repeat; */
-  /* background-position: right; */
-  /* appearance: textfield; */
 }
 .form__number {
   padding-bottom: 3px;
@@ -913,6 +932,7 @@ input[type=date]::-webkit-inner-spin-button {
     width: 100%;
   }
 }
+
 /* contacts------------------------------------------------------------ */
 .contacts-wrap {
   display: flex;
@@ -1001,9 +1021,6 @@ input[type=date]::-webkit-inner-spin-button {
     margin-right: 0;
   }
 }
-@media (max-width: 768px) {
-
-}
 @media (max-width: 540px) {
   .contacts-wrap {
     padding: 30px;
@@ -1015,6 +1032,7 @@ input[type=date]::-webkit-inner-spin-button {
     margin-bottom: 15px;
   }
 }
+
 /* footer--------------------------------------------------------- */
 .footer {
   max-width: 1200px;
@@ -1096,7 +1114,6 @@ input[type=date]::-webkit-inner-spin-button {
 .footer-socials__link:active path {
   fill: #A47312;
 }
-
 @media (max-width: 990px) {
   .footer__info {
     margin-right: 60px;
